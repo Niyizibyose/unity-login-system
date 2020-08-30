@@ -8,7 +8,7 @@ $dbname = "mainapp";
 //variables submmitted by user
 //$loginUser = $_POST["loginUser"];
 //$loginPass = $_POST["loginPass"];
-$itemID = $_POST["itemID"];
+$itemID = 2; // $_POST["itemID"];
 //create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
