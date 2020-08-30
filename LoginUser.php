@@ -17,7 +17,7 @@ if ($conn->connect_error){
     die ("Connection failed: ". $conn->connect_error);
 }
 
-$sql = "SELECT password from users where user_name ='".$loginUser."'";
+$sql = "SELECT password, id from users where user_name ='".$loginUser."'";
 $result = $conn-> query($sql);
 if ($result->num_rows > 0){
     //output data of each row
