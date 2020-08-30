@@ -13,7 +13,7 @@ if($conn-> connect_error){
     die ("Connection failed:" .$conn-> connect_error);
 }
 
-$sql = "SELECT itemID from useritems where userID ='".$itemID."'";
+$sql = "SELECT itemID from useritems where userID ='".$userID."'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0){
