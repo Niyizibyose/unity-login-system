@@ -17,13 +17,13 @@ if ($conn->connect_error){
     die ("Connection failed: ". $conn->connect_error);
 }
 
-$sql = "SELECT password, id from users where user_name ='".$loginUser."'";
+$sql = "SELECT password, user_id from users where user_name ='".$loginUser."'";
 $result = $conn-> query($sql);
 if ($result->num_rows > 0){
     //output data of each row
     while ($row = $result-> fetch_assoc()){
         if ($row["password"] == $loginPass){
-            echo $row["id"];
+            echo $row["user_id"];
         }else {
             echo "Wrong credentials";
         }

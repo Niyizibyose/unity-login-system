@@ -17,7 +17,7 @@ if ($conn->connect_error){
     die ("Connection failed: ". $conn->connect_error);
 }
 
-$sql = "SELECT name, description, price from items where ID = '".$itemID ."'";
+$sql = "SELECT name, description from items where item_id = '".$itemID ."'";
 $result = $conn-> query($sql);
 
 if ($result->num_rows > 0){
